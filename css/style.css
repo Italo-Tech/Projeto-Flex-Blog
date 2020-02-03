@@ -1,0 +1,395 @@
+body, h1, h2, o, ul, li, a {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Nunito", Arial, Helvetica, sans-serif;    /* Fonte geral do site */
+    color: #222222
+}
+
+ul{
+    list-style: none;   /* Remove os estilos(bolinhas da lista) */
+}
+
+a{
+    text-decoration: none; /* Tira a decoração dos links */
+}
+
+img{
+    display: block;
+    max-width: 100%; /* A margem das imagens diminui de acordo com o tamanho da tela, serve para deixar as imagens responsivas */
+}
+
+* /* Todas as tags existentes */ {
+    box-sizing: border-box; 
+}
+
+        /* Superinfo */
+.superinfo-bg{
+    background: #122ab2;
+    color: white;
+}
+
+.superinfo{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Alinha os itens igualmente na linha */
+    flex-wrap:wrap; /* De acordo com o tamanho da tela o superinfo quebra a linha */
+    padding-top: 10px; /* Ajusta o padding para caso diminua a tela a quebra de linha fique justa
+     */
+}
+
+.superinfo p, .superinfo a{
+    margin: 0 10px 10px 10px;
+}
+
+.superinfo a{
+    color: white;
+}
+
+        /* Menu */ 
+.menu-bg{
+    background: #2c70ff;
+}
+
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Alinha os itens igualmente na linha */
+    align-items: center; /* Alinha os itens ao centro do container */
+}
+
+.menu a{
+    color: white;
+}
+
+.menu-logo a{
+    font-size: 2.25em;
+    font-weight: bold; /* Aplica um design no texto "Flex Box"*/
+    margin: 0 10px; /* margem topo:0 / margens laterais: 10px - Colocada para o texto "Flex Blog" não ficar grudado na extremidades*/
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap; /* Não deixa os itens estourar os containers */
+}
+
+.menu-nav a{
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+
+.menu-nav a:hover{
+    color: #122ab2;
+}
+
+        /* Introdução */
+.introducao{
+    font-size: 3em; /* Tamanho da fonte */
+    line-height: 1; /* Espaço da altura das linhas */
+    max-width: 960px; /* Largura máxima */
+    margin: 0 auto; /* Margem 0 para centre ficar alinhado ao centro */
+    padding:  60px 10px; /* Margem de 60px pra cima e pra baixo / e 10px para os lados */
+}
+
+        /* Sobre */
+.sobre{
+    border-top: 2px solid #2c70ff; /* Borda de cima */
+    border-bottom: 2px solid #2c70ff; /* Borda de baixo */
+    max-width: 960px; /* Manter essa borda dentro do container */
+    margin: 0 auto;
+    padding: 60px 0px; /* Deixar alinhado ao centro */
+    display: flex;
+    flex-wrap: wrap; /* Coloca a quebra de linha para itens - ideal para as imagens "sobre" */
+
+}
+
+.sobre-info{
+    flex: 2/*Grow*/ 1/*Shrink*/ 300px; /* Cada flex item possui um tamanho, o Flex item 2 ocupará o tamanho 2x maior de cada flex item de tamanho normal */
+    margin: 0 10px; /* Alinha os espaços da margem do topo e da margem ao lado das imagens "sobre" */
+}
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.sobre-img{
+    flex: 1/*Grow*/ 1/*Shrink*/ 160px;
+    margin: 0 10px;
+}
+
+        /* Produtos */
+.produtos{
+    max-width: 960px; /* Largura máxima */
+    margin: 60px auto; /* Margem */
+}
+
+.produtos h1{
+    font-size: 3em;
+    margin: 0 10px 60px 10px; /* cima / lado / lado / baixo */
+}
+.produtos-container{
+    display: flex; /* Chama o FlexBox - Alinha as imagens */
+    flex-wrap: wrap; /* Alinha a quebra de item */
+    align-items: flex-end; /* Alinha em "coluna" os itens dos produtos */
+}
+/* Arrumando os itens */
+.produtos-item{
+    flex: 1 1 175px; 
+    margin: 10px;
+}
+.produtos-item h2{
+    font-size: 3em; /* Tamanho da fonte */
+    color: #a4a4a4; /* cor */
+    background: #f7f7f7; /* cor de fundo */
+    padding: 60px 20px; /* cima e baixo / lados */
+}
+/* Bordas */
+.purple{
+    border-top:8px solid #ae81ff ; 
+}
+.pink{
+    border-top: 8px solid #f9265e;
+}
+.blue{
+    border-top: 8px solid #66d9eb;
+}
+
+        /* Preços */
+.preco{
+    background: #f7f7f7;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap; /* Caso o redimensionamento da página precise de quebra ele quebra, tornando responsivo */
+    align-items: flex-end; /* Alinha os itens ao final */
+}
+.preco-item{
+    flex: 1 1 250px; /* Caso aumente a página ele aumenta tbm */
+    border:4px solid white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.preco-item h2{ /* Formatação do H2 dos preços */
+    font-size: 3em; 
+    color:#a4a4a4;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.preco-item span{ /* Caixa com borda branca dos valores */
+    max-width: 300px; /* Largura máxima */
+    margin: 20px auto; /* Margem */
+    display:block;
+    text-align:center; /* Texto no centro */
+    font-size: 3em; /* Tamanho da letra */
+    font-weight: bold; 
+    padding: 10px 0 5px 0;
+    border-bottom: 4px solid white;
+    border-top: 4px solid white;
+}
+
+.preco-item sup{  /* Formatação do R$ ao lado do valor */
+    font-size: 1.5rem;
+}
+
+.preco-item ul{ /* Texto descritivo abaixo do preço */
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.5em;
+    line-height: 1;
+    font-style: italic;
+    color:#7c7c7c;
+}
+
+.preco-item li{ /* Posicionando o bolinha do Pseudo Elemento */
+    display: flex;
+    justify-content: space-between; /* Separando o conteúdo no início e ao final */
+    align-items: center; /* Alinha a bolinha ao centro do container */
+    margin-bottom: 15px;
+}
+.preco-item li:after{ /* Pseudo Elemento / Fazendo a bolinha */
+    content: ''; /* Tudo o que eu escrever aqui aparece após(after) as LIs */
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #2c70ff;
+    border-radius: 50px; /* Transformando em círculo */
+}
+
+.preco-item a{
+    max-width: 300px; /* Largura máxima */
+    display: block;
+    margin: 20px auto;
+    border: 4px solid;
+    color: #222222;
+    text-transform: uppercase; /* Todo o texto em letra MAIÚSCULA*/
+    font-weight: bold;
+    font-size:2.25em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .preco {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .preco .preco-item:nth-child(3) { /* Alterando a ordem dos planos quando a página redimensiona para menor, assim mostrando o plano ideal primeiro. */
+        order: -2;
+    }
+
+    .preco .preco-item:nth-child(2) { /* Alterando a ordem dos planos quando a página redimensiona para menor, assim mostrando o plano ideal primeiro. */
+        order: -1;
+    }
+}
+
+        /* Qualidade */
+
+.qualidade{
+    max-width: 960px;
+    margin:60px auto; /* 60px para cima e baixo e auto para os lados */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item{
+    flex:1 1 300px; 
+    margin: 20px 10px; /* Margem para cima e baixo / Margem para os lados */
+}
+
+.qualidade-item h2{
+    font-size: 2.25em;
+    color:#a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before{  /* Pseudo Elemento */
+    content: ''; /* Tudo o que eu escrever aqui aparece antes(before) as LIs */
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background: blue;
+}
+
+/* Estilos das cores ao lado das qualidades
+OBS: Caso eu queira adicionar mais qualidades futuramente,
+por conta das estilizações abaixo, não precisarei fazer alterações
+nas ordens das cores */
+.qualidade-item:nth-of-type(3n+1)  h2::before { /* Pseudo Seletor - Colocando as cores nos Pseudos seletores  */
+    /* O  (3n+1) Ele irá pular 3 elementos para se repetir a partir do 1º item*/
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before { /* Pseudo Seletor - Colocando as cores nos Pseudos seletores  */
+    /* O  (3n+2) Ele irá pular 3 elementos para se repetir a partir do 2º item*/
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before { /* Pseudo Seletor - Colocando as cores nos Pseudos seletores  */
+    background: #66d9eb;
+   /* O  (3n+3) Ele irá pular 3 elementos para se repetir a partir do 3º item*/
+}
+
+.qualidade-item p{
+    font-size: 1.25em;
+    line-height: 1.4; /* Corpo de Texto */
+    color: #7c7c7c;
+}
+
+        /* Newsletter */
+
+.newsletter{
+    background: #f7f7f7;
+    padding: 60px calc((100% - 960px) / 2 ); /* De acordo com a dimensão do background ele acaba quebrando/ com o calc ele não quebra mais */
+    display: flex;
+    flex-wrap: wrap; /* Quebrar os itens de acordo com o tamanho da tela */
+}
+
+.newsletter-info{
+    flex: 1 1 240px; 
+    margin: 0 10px; 
+}
+
+.newsletter-info h1{
+    font-size: 3em;
+    color: #a4a4a4
+}
+
+.newsletter-info p{
+    font-size: 1.25em;
+    font-style: italic;
+    max-width: 230px; /* Proporciona quebrar a linha */
+    color:#7c7c7c;
+    margin-bottom: 10px;
+}
+
+.newsletter-form{
+    flex: 2 1 260px;
+    margin: 0 10px; /*Deixa alinhado caso quebre a dimensão da tela*/
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input{
+    flex: 3 1 260px;
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-style: italic;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    border: 4px solid #2c70ff;
+    background: transparent; 
+    padding: 15px 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.newsletter-form button{
+    flex:1 1 200px;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #2c70ff;
+    color:white;
+    margin: 0px;
+    cursor: pointer; /* Coloca uma mãozinha quando passa o mouse em cima dele */
+    border: 0px;
+    padding: 15px 10px; /* cima baixo / lados */
+}
+
+@media (max-width: 600px) {
+    .newsletter-form button{
+        font-size: 1.5em;
+    }
+}
+        /* Footer */
+.footer{
+    display: flex;
+    background: #2c07ff;
+    height: 200px;
+    align-items: center;
+}
+
+.footer p{
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2; 
+}
