@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
 body, h1, h2, o, ul, li, a {
     margin: 0px;
     padding: 0px;
 }
 
 body{
-    font-family: "Nunito", Arial, Helvetica, sans-serif;    /* Fonte geral do site */
+    /* font-family: "Nunito", Arial, Helvetica, sans-serif;    Fonte geral do site */
     color: #222222
 }
 
@@ -22,10 +24,11 @@ img{
 }
 
 * /* Todas as tags existentes */ {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
         /* Superinfo */
+
 .superinfo-bg{
     background: #122ab2;
     color: white;
@@ -49,7 +52,7 @@ img{
     color: white;
 }
 
-        /* Menu */ 
+        /* Menu */
 .menu-bg{
     background: #2c70ff;
 }
@@ -57,7 +60,7 @@ img{
 .menu{
     max-width: 960px;
     margin: 0 auto;
-    padding: 15px 0; 
+    padding: 15px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;  /* Alinha os itens igualmente na linha */
@@ -140,7 +143,7 @@ img{
 
 .produtos h1{
     font-size: 3em;
-    margin: 0 10px 60px 10px; /* cima / lado / lado / baixo */
+    margin: 0 10px 10px 10px; /* cima / lado / lado / baixo */
 }
 .produtos-container{
     display: flex; /* Chama o FlexBox - Alinha as imagens */
@@ -149,7 +152,7 @@ img{
 }
 /* Arrumando os itens */
 .produtos-item{
-    flex: 1 1 175px; 
+    flex: 1 1 175px;
     margin: 10px;
 }
 .produtos-item h2{
@@ -160,7 +163,7 @@ img{
 }
 /* Bordas */
 .purple{
-    border-top:8px solid #ae81ff ; 
+    border-top:8px solid #ae81ff ;
 }
 .pink{
     border-top: 8px solid #f9265e;
@@ -179,14 +182,76 @@ img{
 }
 .preco-item{
     flex: 1 1 250px; /* Caso aumente a página ele aumenta tbm */
-    border:4px solid white;
+    /* border:4px solid white; */
     padding: 20px;
     margin: 10px;
 }
 
+        /* Bordas e títulos dos preços */
+/* COBRE */
+.title-cobre{
+   color: #ce9968;
+}
+.preco-item .span-cobre{
+    border-bottom: 4px solid #ce9968;
+    border-top: 4px solid #ce9968;
+}
+.preco-cobre{
+    border:4px solid #ce9968;
+}
+.preco-cobre li:after{ /* Pseudo Elemento / Fazendo a bolinha */
+    content: ''; /* Tudo o que eu escrever aqui aparece após(after) as LIs */
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #ce9968;
+    border-radius: 50px; /* Transformando em círculo */
+}
+
+/* PRATA */
+.title-prata{
+    color: #c0c0c0;
+}
+.preco-item .span-prata{
+    border-bottom: 4px solid #c0c0c0;
+    border-top: 4px solid #c0c0c0;
+}
+.preco-prata{
+    border:4px solid #c0c0c0;
+}
+.preco-prata li:after{ /* Pseudo Elemento / Fazendo a bolinha */
+    content: ''; /* Tudo o que eu escrever aqui aparece após(after) as LIs */
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #c0c0c0;
+    border-radius: 50px; /* Transformando em círculo */
+}
+
+
+/* OURO */
+.title-ouro{
+    color:  #f1c532;
+}
+.preco-item .span-ouro{
+    border-bottom: 4px solid #f1c532;
+    border-top: 4px solid #f1c532;
+}
+.preco-ouro{
+    border:4px solid #f1c532;
+}
+.preco-ouro li:after{ /* Pseudo Elemento / Fazendo a bolinha */
+    content: ''; /* Tudo o que eu escrever aqui aparece após(after) as LIs */
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #f1c532;
+    border-radius: 50px; /* Transformando em círculo */
+}
+
+
 .preco-item h2{ /* Formatação do H2 dos preços */
-    font-size: 3em; 
-    color:#a4a4a4;
+    font-size: 3em;
     text-align: center;
     margin-top: 40px;
 }
@@ -197,10 +262,8 @@ img{
     display:block;
     text-align:center; /* Texto no centro */
     font-size: 3em; /* Tamanho da letra */
-    font-weight: bold; 
+    font-weight: bold;
     padding: 10px 0 5px 0;
-    border-bottom: 4px solid white;
-    border-top: 4px solid white;
 }
 
 .preco-item sup{  /* Formatação do R$ ao lado do valor */
@@ -222,26 +285,41 @@ img{
     align-items: center; /* Alinha a bolinha ao centro do container */
     margin-bottom: 15px;
 }
-.preco-item li:after{ /* Pseudo Elemento / Fazendo a bolinha */
-    content: ''; /* Tudo o que eu escrever aqui aparece após(after) as LIs */
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: #2c70ff;
-    border-radius: 50px; /* Transformando em círculo */
-}
+
 
 .preco-item a{
     max-width: 300px; /* Largura máxima */
     display: block;
     margin: 20px auto;
-    border: 4px solid;
-    color: #222222;
+    border: 3px solid;
+    border-radius: 5px;
+    color:#222222;
     text-transform: uppercase; /* Todo o texto em letra MAIÚSCULA*/
     font-weight: bold;
-    font-size:2.25em;
+    font-size:1.75em;
     padding: 15px 0;
     text-align: center;
+    transition: opacity 0.2s;
+}
+/* BUTTON HOVER COBRE */
+.hover-cobre:hover{
+    border: 3px solid #ce9968;
+    background: #ce9968;
+    opacity: 1;
+}
+
+/* BUTTON HOVER PRATA */
+.hover-prata:hover{
+    border: 3px solid #a1a0a0;
+    background: #a1a0a0;
+    opacity: 1;
+}
+
+/* BUTTON HOVER OURO */
+.hover-ouro:hover{
+    border: 3px solid #f1c532;
+    background: #f1c532;
+    opacity: 1;
 }
 
 @media (max-width: 800px) {
@@ -268,7 +346,7 @@ img{
 }
 
 .qualidade-item{
-    flex:1 1 300px; 
+    flex:1 1 300px;
     margin: 20px 10px; /* Margem para cima e baixo / Margem para os lados */
 }
 
@@ -322,8 +400,8 @@ nas ordens das cores */
 }
 
 .newsletter-info{
-    flex: 1 1 240px; 
-    margin: 0 10px; 
+    flex: 1 1 240px;
+    margin: 0 10px;
 }
 
 .newsletter-info h1{
@@ -354,7 +432,7 @@ nas ordens das cores */
     font-style: italic;
     font-family: "Nunito", Arial, Helvetica, sans-serif;
     border: 4px solid #2c70ff;
-    background: transparent; 
+    background: transparent;
     padding: 15px 10px;
     margin: 0px;
     border-radius: 0px;
@@ -363,7 +441,7 @@ nas ordens das cores */
 .newsletter-form button{
     flex:1 1 200px;
     font-family: "Nunito", Arial, Helvetica, sans-serif;
-    font-size: 2.25em;
+    font-size: 1.75em;
     font-weight: bold;
     text-transform: uppercase;
     background: #2c70ff;
@@ -372,6 +450,9 @@ nas ordens das cores */
     cursor: pointer; /* Coloca uma mãozinha quando passa o mouse em cima dele */
     border: 0px;
     padding: 15px 10px; /* cima baixo / lados */
+}
+.newsletter-form:hover button, .newsletter-form:hover input{
+    opacity: 0.8;
 }
 
 @media (max-width: 600px) {
@@ -382,7 +463,7 @@ nas ordens das cores */
         /* Footer */
 .footer{
     display: flex;
-    background: #2c07ff;
+    background: #2c70ff;
     height: 200px;
     align-items: center;
 }
@@ -391,5 +472,5 @@ nas ordens das cores */
     flex: 1;
     text-align: center;
     font-size: 2.25em;
-    color: #122ab2; 
+    color: #122ab2;
 }
